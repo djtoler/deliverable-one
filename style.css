@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+/* breakpoint 768px */
+:root {
+  /* declare variables to hold values that are needed through-out the styleshee */
+  font-family: "Bungee", cursive; /* Colors: */
+
+  --background: #ff00ff;
+  /* Background accent  */
+
+  --nav-border: #7944e6;
+
+  /* Navigation links
+Border on three rectangles */
+
+  --hovercolor: #10fdff;
+  /* Navigation links on hover */
+}
+
+/* style navs */
+nav {
+  display: flex;
+  height: 60px;
+}
+
+.logo {
+  display: contents;
+}
+
+.nav_links {
+  display: flex;
+  margin-left: auto;
+  padding-right: 10px;
+}
+
+.nav_link {
+  list-style: none;
+  margin-left: 12px;
+}
+
+.nav_link:first-of-type {
+    margin-left: 0;
+}
+
+.nav_link > a {
+  text-decoration: none;
+}
+
+.nav_link > a:hover , section > a:hover {
+  color: var(--hovercolor);
+}
+
+/* hero */
+.hero {
+  margin-top: 6px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.hero_img {
+  width: 50%;
+  align-self: center;
+}
+
+.hero_content {
+    padding-top: 50px;
+    line-height: 24px;
+}
+
+.hero_content > * {
+  margin: 0;
+}
+
+
+/* contents */
+
+.content > section {
+  margin: 12px;
+  border: 5px solid var(--nav-border);
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section > img {
+  width: 100%;
+}
+
+section > a {
+  text-decoration: none;
+  margin-top: auto;
+}
+
+/* style for desktop */
+@media (min-width: 768px) {
+  .hero,
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .hero {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+
+  .hero_img {
+    width: 40%;
+  }
+
+  .hero_content {
+    width: 50%;
+    
+  }
+
+  .content {
+    margin-top: 24px;
+  }
+  .content > section {
+    width: 25%;
+    margin: 0;
+  }
+}
